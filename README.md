@@ -1,49 +1,37 @@
-# IIT-Kanpur-Campus-Shortest-Path-Finder
-# 🗺️ IIT Kanpur Campus Pathfinding  
-A C++ implementation of **Dijkstra’s Algorithm** to find the shortest path between locations on the IIT Kanpur campus, featuring a **custom graph data structure**, **STL containers**, and a **graphical interface using SFML**.  
+# IIT Kanpur Campus Shortest Path Finder
 
-## 📌 Features  
-- **Optimal Pathfinding** — Implements Dijkstra’s algorithm to find the shortest route between two points.  
-- **Custom Graph Structure** — Designed and optimized for quick queries and easy scalability.  
-- **Efficient Data Management** — Uses STL containers like `std::vector`, `std::unordered_map`, and `std::priority_queue`.  
-- **Console Interface** — For quick text-based queries and debugging.  
-- **Graphical Interface (SFML)** — Visualizes the IIT Kanpur campus map with animated pathfinding.  
-- **Step-by-Step Animation** — See the algorithm explore nodes in real time.  
+A C++ implementation of **Dijkstra’s Algorithm** to find the shortest path between two locations on the IIT Kanpur campus.  
+The project uses a **custom graph data structure** and leverages STL containers such as `std::vector`, `std::unordered_map`, and `std::priority_queue` for efficient data management.
 
-## 🖥️ Tech Stack  
-- **Language**: C++17  
-- **Algorithm**: Dijkstra’s Shortest Path  
-- **Libraries**:  
-  - STL (`vector`, `unordered_map`, `priority_queue`)  
-  - [SFML](https://www.sfml-dev.org/) for graphics and animation  
+---
 
-## 📷 Screenshots  
-*(Add your own screenshots here — one of the campus map and one showing the path animation)*  
+## Features
+- **Shortest Path Calculation**: Implements Dijkstra's algorithm to determine the minimum distance between two points.
+- **Custom Graph Structure**: Designed for quick lookups and scalability.
+- **STL Integration**: Efficient use of `vector`, `unordered_map`, and `priority_queue`.
+- **User Queries**: Console-based interface for easy interaction.
+- **Extensible**: Can be integrated into graphical interfaces (e.g., SFML) for visualization.
 
-Example:  
-![Pathfinding Animation](screenshots/demo.gif)  
+---
 
-## 📂 Project Structure  
+## How It Works
+1. **Graph Creation**:  
+   - Each location is represented as a node.  
+   - Paths between locations are edges with associated distances.
 
-## 🚀 Getting Started  
+2. **Dijkstra’s Algorithm**:  
+   - Maintains a priority queue to explore the shortest distance nodes first.  
+   - Updates distances to neighboring nodes when shorter paths are found.
 
-### Prerequisites  
-- C++17 or later  
-- [SFML 2.5+](https://www.sfml-dev.org/download.php) installed and linked  
-- CMake (optional, for easier building)  
+3. **Output**:  
+   - Displays the shortest distance and the exact path from the start location to the destination.
 
-### Build & Run (Linux/Mac)  
-```bash
-# Clone repository
-git clone https://github.com/yourusername/iitk-pathfinding.git
-cd iitk-pathfinding
+---
 
-# Build with CMake
-mkdir build && cd build
-cmake ..
-make
+## Example
+```text
+Enter start location: Library
+Enter destination: Hall 9
 
-# Run
-./iitk_pathfinding
-
-If you want, I can also add **badges** (like C++ version, license, SFML used) so your GitHub page looks even more professional. That would make it pop visually.
+Shortest distance: 2.5 km
+Path: Library → Computer Centre → Hall 9
